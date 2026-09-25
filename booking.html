@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Book an Appointment | The Fade Room</title>
+
+    <meta
+      name="description"
+      content="Book your next haircut or grooming appointment at The Fade Room."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body class="bg-brand-black text-brand-white font-sans antialiased">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+      id="site-header"
+      class="fixed left-0 right-0 top-0 z-50 border-b border-brand-border bg-brand-black/95 backdrop-blur-md"
+    >
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Logo -->
+
+          <a
+            href="index.html"
+            class="flex items-center gap-3"
+            aria-label="The Fade Room home"
+          >
+            <span
+              class="flex h-10 w-10 items-center justify-center border border-brand-gold font-display text-lg text-brand-gold"
+            >
+              FR
+            </span>
+
+            <span>
+              <span
+                class="block font-display text-lg font-semibold tracking-wide"
+              >
+                THE FADE ROOM
+              </span>
+
+              <span
+                class="hidden text-[10px] uppercase tracking-[0.25em] text-brand-muted sm:block"
+              >
+                Precision Grooming
+              </span>
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+
+          <nav
+            class="hidden items-center gap-8 lg:flex"
+            aria-label="Main navigation"
+          >
+            <a href="index.html" class="nav-link"> Home </a>
+
+            <a href="services.html" class="nav-link"> Services </a>
+
+            <a href="about.html" class="nav-link"> About </a>
+
+            <a href="booking.html" class="nav-link nav-link-active">
+              Contact
+            </a>
+
+            <a href="booking.html" class="gold-button"> Book Now </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="flex h-11 w-11 items-center justify-center border border-brand-border lg:hidden"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only"> Open menu </span>
+
+            <span class="space-y-1.5">
+              <span class="block h-px w-6 bg-brand-white"></span>
+              <span class="block h-px w-6 bg-brand-white"></span>
+              <span class="block h-px w-6 bg-brand-white"></span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-brand-border lg:hidden"
+        >
+          <nav class="flex flex-col py-5" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link"> Home </a>
+
+            <a href="services.html" class="mobile-nav-link"> Services </a>
+
+            <a href="about.html" class="mobile-nav-link"> About </a>
+
+            <a
+              href="booking.html"
+              class="mobile-nav-link mobile-nav-link-active"
+            >
+              Contact
+            </a>
+
+            <a href="booking.html" class="gold-button mt-4 text-center">
+              Book Now
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="pt-20">
+      <!-- =================================================
+             PAGE HERO
+        ================================================== -->
+
+      <section class="border-b border-brand-border bg-brand-surface">
+        <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+          <p class="eyebrow">Appointments</p>
+
+          <h1
+            class="mt-4 max-w-3xl font-display text-5xl font-semibold leading-tight sm:text-6xl"
+          >
+            Book your next
+            <span class="text-brand-gold">appointment.</span>
+          </h1>
+
+          <p
+            class="mt-6 max-w-2xl text-base leading-8 text-brand-muted sm:text-lg"
+          >
+            Choose your service, barber, date and time. We'll have your
+            appointment ready when you arrive.
+          </p>
+        </div>
+      </section>
+
+      <!-- =================================================
+             BOOKING SECTION
+        ================================================== -->
+
+      <section class="section-padding">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-[1fr_360px]">
+            <!-- =====================================
+                         BOOKING FORM
+                    ====================================== -->
+
+            <div>
+              <form id="booking-form" class="space-y-8" novalidate>
+                <!-- =================================
+                                 STEP 1 — SERVICE
+                            ================================== -->
+
+                <section class="booking-section">
+                  <div class="booking-section-header">
+                    <span class="booking-step"> 01 </span>
+
+                    <div>
+                      <h2 class="font-display text-2xl font-semibold">
+                        Choose your service
+                      </h2>
+
+                      <p class="mt-1 text-sm text-brand-muted">
+                        Select the grooming service you need.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-7 grid gap-4 sm:grid-cols-2">
+                    <!-- Signature Fade -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Signature Fade"
+                        data-duration="45"
+                        data-price="250"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Signature Fade
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              45 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R250
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Classic Haircut -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Classic Haircut"
+                        data-duration="40"
+                        data-price="220"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Classic Haircut
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              40 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R220
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Beard Sculpt -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Beard Sculpt"
+                        data-duration="25"
+                        data-price="150"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Beard Sculpt
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              25 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R150
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Haircut + Beard -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Haircut + Beard"
+                        data-duration="60"
+                        data-price="350"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Haircut + Beard
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              60 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R350
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Kids Cut -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Kids Cut"
+                        data-duration="30"
+                        data-price="180"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Kids Cut
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              30 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R180
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Full Grooming -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="Full Grooming Experience"
+                        data-duration="75"
+                        data-price="450"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="flex items-start justify-between gap-4">
+                          <span>
+                            <span class="block font-display text-lg">
+                              Full Grooming Experience
+                            </span>
+
+                            <span class="mt-1 block text-xs text-brand-muted">
+                              75 minutes
+                            </span>
+                          </span>
+
+                          <span class="font-semibold text-brand-gold">
+                            R450
+                          </span>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </section>
+
+                <!-- =================================
+                                 STEP 2 — BARBER
+                            ================================== -->
+
+                <section class="booking-section">
+                  <div class="booking-section-header">
+                    <span class="booking-step"> 02 </span>
+
+                    <div>
+                      <h2 class="font-display text-2xl font-semibold">
+                        Choose your barber
+                      </h2>
+
+                      <p class="mt-1 text-sm text-brand-muted">
+                        Select the professional you'd like to see.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-7 grid gap-4 md:grid-cols-3">
+                    <!-- Marcus -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="barber"
+                        value="Marcus"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="block font-display text-lg"> Marcus </span>
+
+                        <span
+                          class="mt-2 block text-xs uppercase tracking-wider text-brand-gold"
+                        >
+                          Senior Barber
+                        </span>
+
+                        <span
+                          class="mt-3 block text-sm leading-6 text-brand-muted"
+                        >
+                          Fades & modern cuts
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Daniel -->
+
+                    <label class="booking-option">
+                      <input
+                        type="radio"
+                        name="barber"
+                        value="Daniel"
+                        required
+                      />
+
+                      <span class="booking-option-content">
+                        <span class="block font-display text-lg"> Daniel </span>
+
+                        <span
+                          class="mt-2 block text-xs uppercase tracking-wider text-brand-gold"
+                        >
+                          Master Barber
+                        </span>
+
+                        <span
+                          class="mt-3 block text-sm leading-6 text-brand-muted"
+                        >
+                          Classic cuts & beards
+                        </span>
+                      </span>
+                    </label>
+
+                    <!-- Leo -->
+
+                    <label class="booking-option">
+                      <input type="radio" name="barber" value="Leo" required />
+
+                      <span class="booking-option-content">
+                        <span class="block font-display text-lg"> Leo </span>
+
+                        <span
+                          class="mt-2 block text-xs uppercase tracking-wider text-brand-gold"
+                        >
+                          Grooming Specialist
+                        </span>
+
+                        <span
+                          class="mt-3 block text-sm leading-6 text-brand-muted"
+                        >
+                          Styling & complete grooming
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </section>
+
+                <!-- =================================
+                                 STEP 3 — DATE & TIME
+                            ================================== -->
+
+                <section class="booking-section">
+                  <div class="booking-section-header">
+                    <span class="booking-step"> 03 </span>
+
+                    <div>
+                      <h2 class="font-display text-2xl font-semibold">
+                        Choose date & time
+                      </h2>
+
+                      <p class="mt-1 text-sm text-brand-muted">
+                        Appointments are available Monday to Saturday.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-7 grid gap-5 md:grid-cols-2">
+                    <div>
+                      <label for="booking-date" class="form-label">
+                        Appointment date
+                      </label>
+
+                      <input
+                        id="booking-date"
+                        name="date"
+                        type="date"
+                        class="form-input"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label for="booking-time" class="form-label">
+                        Appointment time
+                      </label>
+
+                      <select
+                        id="booking-time"
+                        name="time"
+                        class="form-input"
+                        required
+                      >
+                        <option value="">Select a time</option>
+
+                        <option value="09:00">09:00</option>
+
+                        <option value="09:30">09:30</option>
+
+                        <option value="10:00">10:00</option>
+
+                        <option value="10:30">10:30</option>
+
+                        <option value="11:00">11:00</option>
+
+                        <option value="11:30">11:30</option>
+
+                        <option value="12:00">12:00</option>
+
+                        <option value="12:30">12:30</option>
+
+                        <option value="13:00">13:00</option>
+
+                        <option value="13:30">13:30</option>
+
+                        <option value="14:00">14:00</option>
+
+                        <option value="14:30">14:30</option>
+
+                        <option value="15:00">15:00</option>
+
+                        <option value="15:30">15:30</option>
+
+                        <option value="16:00">16:00</option>
+
+                        <option value="16:30">16:30</option>
+
+                        <option value="17:00">17:00</option>
+
+                        <option value="17:30">17:30</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <p
+                    id="date-help"
+                    class="mt-4 hidden text-sm text-red-400"
+                  ></p>
+                </section>
+
+                <!-- =================================
+                                 STEP 4 — CUSTOMER DETAILS
+                            ================================== -->
+
+                <section class="booking-section">
+                  <div class="booking-section-header">
+                    <span class="booking-step"> 04 </span>
+
+                    <div>
+                      <h2 class="font-display text-2xl font-semibold">
+                        Your details
+                      </h2>
+
+                      <p class="mt-1 text-sm text-brand-muted">
+                        Tell us who the appointment is for.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-7 grid gap-5 md:grid-cols-2">
+                    <div class="md:col-span-2">
+                      <label for="customer-name" class="form-label">
+                        Full name
+                      </label>
+
+                      <input
+                        id="customer-name"
+                        name="customerName"
+                        type="text"
+                        class="form-input"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label for="customer-email" class="form-label">
+                        Email address
+                      </label>
+
+                      <input
+                        id="customer-email"
+                        name="customerEmail"
+                        type="email"
+                        class="form-input"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label for="customer-phone" class="form-label">
+                        Phone number
+                      </label>
+
+                      <input
+                        id="customer-phone"
+                        name="customerPhone"
+                        type="tel"
+                        class="form-input"
+                        placeholder="+27 00 000 0000"
+                        autocomplete="tel"
+                        required
+                      />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- =================================
+                                 CONFIRMATION
+                            ================================== -->
+
+                <div
+                  id="booking-error"
+                  class="hidden border border-red-500/30 bg-red-500/5 p-5 text-sm leading-6 text-red-300"
+                  role="alert"
+                ></div>
+
+                <button
+                  type="submit"
+                  class="gold-button w-full py-4 text-sm sm:w-auto"
+                >
+                  Confirm Appointment
+                </button>
+              </form>
+
+              <!-- =====================================
+                             SUCCESS PANEL
+                        ====================================== -->
+
+              <section
+                id="booking-success"
+                class="hidden border border-brand-gold/40 bg-brand-surface p-6 sm:p-10"
+                aria-live="polite"
+              >
+                <div class="mx-auto max-w-2xl text-center">
+                  <div
+                    class="mx-auto flex h-16 w-16 items-center justify-center border border-brand-gold text-2xl text-brand-gold"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </div>
+
+                  <p class="eyebrow mt-7">Appointment Confirmed</p>
+
+                  <h2 class="mt-4 font-display text-4xl font-semibold">
+                    You're booked.
+                  </h2>
+
+                  <p class="mt-5 leading-7 text-brand-muted">
+                    Your appointment details are ready. Add the appointment to
+                    your calendar so you don't miss it.
+                  </p>
+
+                  <!-- Appointment Summary -->
+
+                  <div
+                    id="confirmation-summary"
+                    class="mt-8 border border-brand-border bg-brand-black p-6 text-left"
+                  ></div>
+
+                  <!-- Calendar Actions -->
+
+                  <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                    <a
+                      id="google-calendar-button"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="gold-button text-center"
+                    >
+                      Add to Google Calendar
+                    </a>
+
+                    <button
+                      id="apple-calendar-button"
+                      type="button"
+                      class="border border-brand-border bg-brand-secondary px-5 py-3 text-sm font-semibold uppercase tracking-wider transition hover:border-brand-gold hover:text-brand-gold"
+                    >
+                      Download Apple Calendar Event
+                    </button>
+                  </div>
+
+                  <button
+                    id="new-booking-button"
+                    type="button"
+                    class="mt-6 text-sm text-brand-muted underline underline-offset-4 transition hover:text-brand-gold"
+                  >
+                    Make another booking
+                  </button>
+                </div>
+              </section>
+            </div>
+
+            <!-- =====================================
+                         BOOKING SIDEBAR
+                    ====================================== -->
+
+            <aside class="lg:sticky lg:top-28 lg:self-start">
+              <div class="border border-brand-border bg-brand-surface p-6">
+                <p class="eyebrow">The Fade Room</p>
+
+                <h2 class="mt-4 font-display text-2xl">
+                  Appointment information
+                </h2>
+
+                <div class="mt-7 space-y-6">
+                  <div>
+                    <p
+                      class="text-xs uppercase tracking-wider text-brand-muted"
+                    >
+                      Location
+                    </p>
+
+                    <p class="mt-2 leading-6">
+                      24 Main Street<br />
+                      Rosebank, Johannesburg<br />
+                      South Africa
+                    </p>
+                  </div>
+
+                  <div>
+                    <p
+                      class="text-xs uppercase tracking-wider text-brand-muted"
+                    >
+                      Opening hours
+                    </p>
+
+                    <div class="mt-2 space-y-2 text-sm">
+                      <p class="flex justify-between gap-5">
+                        <span>Mon – Fri</span>
+                        <span>09:00 – 18:00</span>
+                      </p>
+
+                      <p class="flex justify-between gap-5">
+                        <span>Saturday</span>
+                        <span>08:00 – 16:00</span>
+                      </p>
+
+                      <p class="flex justify-between gap-5">
+                        <span>Sunday</span>
+                        <span class="text-brand-muted"> Closed </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="border-t border-brand-border pt-6">
+                    <p
+                      class="text-xs uppercase tracking-wider text-brand-muted"
+                    >
+                      Need help?
+                    </p>
+
+                    <a
+                      href="tel:+27105550147"
+                      class="mt-2 block text-brand-gold hover:text-brand-goldLight"
+                    >
+                      +27 10 555 0147
+                    </a>
+
+                    <a
+                      href="mailto:hello@thefaderoom.example"
+                      class="mt-1 block text-sm text-brand-muted hover:text-brand-gold"
+                    >
+                      hello@thefaderoom.example
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Booking note -->
+
+              <div
+                class="mt-5 border border-brand-gold/20 bg-brand-surface p-6"
+              >
+                <p class="font-display text-lg">First visit?</p>
+
+                <p class="mt-3 text-sm leading-6 text-brand-muted">
+                  Use code
+                  <strong class="text-brand-gold"> FIRSTCUT15 </strong>
+                  when speaking with the team about your first appointment.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="border-t border-brand-border bg-brand-surface">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Brand -->
+
+          <div>
+            <a href="index.html" class="flex items-center gap-3">
+              <span
+                class="flex h-10 w-10 items-center justify-center border border-brand-gold font-display text-brand-gold"
+              >
+                FR
+              </span>
+
+              <span class="font-display text-lg"> THE FADE ROOM </span>
+            </a>
+
+            <p class="mt-5 max-w-xs text-sm leading-7 text-brand-muted">
+              Precision grooming for people who care about the details.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+
+          <div>
+            <h3 class="footer-heading">Explore</h3>
+
+            <nav class="mt-5 flex flex-col gap-3 text-sm">
+              <a href="index.html" class="footer-link"> Home </a>
+
+              <a href="services.html" class="footer-link"> Services </a>
+
+              <a href="about.html" class="footer-link"> About </a>
+
+              <a href="booking.html" class="footer-link">
+                Book an Appointment
+              </a>
+
+              <a href="terms.html" class="footer-link"> Terms & Conditions </a>
+            </nav>
+          </div>
+
+          <!-- Contact -->
+
+          <div>
+            <h3 class="footer-heading">Contact</h3>
+
+            <div class="mt-5 space-y-3 text-sm text-brand-muted">
+              <p>
+                <a href="tel:+27105550147" class="footer-link">
+                  +27 10 555 0147
+                </a>
+              </p>
+
+              <p>
+                <a href="mailto:hello@thefaderoom.example" class="footer-link">
+                  hello@thefaderoom.example
+                </a>
+              </p>
+
+              <p>
+                24 Main Street<br />
+                Rosebank, Johannesburg<br />
+                South Africa
+              </p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+
+          <div>
+            <h3 class="footer-heading">Opening Hours</h3>
+
+            <div class="mt-5 space-y-3 text-sm text-brand-muted">
+              <p class="flex justify-between gap-6">
+                <span>Mon – Fri</span>
+                <span>09:00 – 18:00</span>
+              </p>
+
+              <p class="flex justify-between gap-6">
+                <span>Saturday</span>
+                <span>08:00 – 16:00</span>
+              </p>
+
+              <p class="flex justify-between gap-6">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 flex flex-col gap-4 border-t border-brand-border pt-6 text-sm text-brand-muted sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>
+            © <span data-current-year></span> The Fade Room. All rights
+            reserved.
+          </p>
+
+          <div class="flex gap-5">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

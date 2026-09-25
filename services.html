@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Services & Pricing | The Fade Room</title>
+    <meta
+      name="description"
+      content="Explore The Fade Room's professional haircut, fade, beard grooming and complete grooming services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body class="bg-brand-black text-brand-white font-sans antialiased">
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 border-b border-brand-border bg-brand-black/95 backdrop-blur-md"
+    >
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="group flex items-center gap-3"
+            aria-label="The Fade Room home"
+          >
+            <span
+              class="flex h-10 w-10 items-center justify-center border border-brand-gold text-brand-gold font-display text-lg"
+            >
+              FR
+            </span>
+
+            <span>
+              <span
+                class="block font-display text-lg font-semibold tracking-wide"
+              >
+                THE FADE ROOM
+              </span>
+              <span
+                class="hidden text-[10px] uppercase tracking-[0.25em] text-brand-muted sm:block"
+              >
+                Precision Grooming
+              </span>
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden items-center gap-8 lg:flex"
+            aria-label="Main navigation"
+          >
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="services.html" class="nav-link nav-link-active"
+              >Services</a
+            >
+            <a href="about.html" class="nav-link">About</a>
+            <a href="booking.html" class="nav-link">Contact</a>
+
+            <a href="booking.html" class="gold-button"> Book Now </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="flex h-11 w-11 items-center justify-center border border-brand-border text-brand-white lg:hidden"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only">Open menu</span>
+
+            <span class="space-y-1.5">
+              <span class="block h-px w-6 bg-brand-white"></span>
+              <span class="block h-px w-6 bg-brand-white"></span>
+              <span class="block h-px w-6 bg-brand-white"></span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-brand-border lg:hidden"
+        >
+          <nav class="flex flex-col py-5" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a
+              href="services.html"
+              class="mobile-nav-link mobile-nav-link-active"
+              >Services</a
+            >
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="booking.html" class="mobile-nav-link">Contact</a>
+
+            <a href="booking.html" class="gold-button mt-4 text-center">
+              Book Now
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================
+             SERVICES HERO
+        ========================== -->
+      <section class="relative overflow-hidden pt-20">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=2000&q=85"
+            alt="Professional barber preparing a client's haircut"
+            class="h-full w-full object-cover"
+          />
+
+          <div class="absolute inset-0 bg-black/75"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/30"
+          ></div>
+        </div>
+
+        <div
+          class="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-5 py-24 sm:px-8"
+        >
+          <div class="max-w-3xl">
+            <p
+              class="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-brand-gold"
+            >
+              Services & Pricing
+            </p>
+
+            <h1
+              class="font-display text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl"
+            >
+              Precision cuts.
+              <span class="text-brand-gold">Exceptional grooming.</span>
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-brand-muted">
+              From sharp fades and classic cuts to complete grooming
+              experiences, every appointment is built around precision, comfort
+              and personal style.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             SERVICES INTRO
+        ========================== -->
+      <section class="section-padding">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Our Services</p>
+
+            <h2 class="section-title mt-4">Grooming done properly.</h2>
+
+            <p class="mt-6 leading-8 text-brand-muted">
+              We keep our service menu focused on what we do best: exceptional
+              cuts, detailed beard work and complete grooming. Every service
+              includes consultation and attention to detail.
+            </p>
+          </div>
+
+          <!-- Service Cards -->
+          <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Signature Fade -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">01</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Signature Fade
+                  </h3>
+                </div>
+
+                <span class="service-price">R250</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                A precision fade tailored to your head shape, hair texture and
+                preferred finish.
+              </p>
+
+              <div class="service-meta">
+                <span>45 minutes</span>
+                <span>Precision fade</span>
+              </div>
+
+              <a
+                href="booking.html?service=Signature%20Fade"
+                class="service-link"
+              >
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Classic Haircut -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">02</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Classic Haircut
+                  </h3>
+                </div>
+
+                <span class="service-price">R220</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                A clean, timeless haircut finished with detailed styling and
+                professional grooming.
+              </p>
+
+              <div class="service-meta">
+                <span>40 minutes</span>
+                <span>Classic styling</span>
+              </div>
+
+              <a
+                href="booking.html?service=Classic%20Haircut"
+                class="service-link"
+              >
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Beard Sculpt -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">03</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Beard Sculpt
+                  </h3>
+                </div>
+
+                <span class="service-price">R150</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                Shape, define and refine your beard with precision lines and a
+                finish designed around your features.
+              </p>
+
+              <div class="service-meta">
+                <span>25 minutes</span>
+                <span>Beard detailing</span>
+              </div>
+
+              <a
+                href="booking.html?service=Beard%20Sculpt"
+                class="service-link"
+              >
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Haircut + Beard -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">04</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Haircut + Beard
+                  </h3>
+                </div>
+
+                <span class="service-price">R350</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                Combine a precision haircut with a detailed beard sculpt for a
+                complete, polished look.
+              </p>
+
+              <div class="service-meta">
+                <span>60 minutes</span>
+                <span>Complete grooming</span>
+              </div>
+
+              <a
+                href="booking.html?service=Haircut%20%2B%20Beard"
+                class="service-link"
+              >
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Kids Cut -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">05</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Kids Cut
+                  </h3>
+                </div>
+
+                <span class="service-price">R180</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                A comfortable, professional haircut for younger clients, with
+                patience and attention to detail.
+              </p>
+
+              <div class="service-meta">
+                <span>30 minutes</span>
+                <span>Children's cut</span>
+              </div>
+
+              <a href="booking.html?service=Kids%20Cut" class="service-link">
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Full Grooming -->
+            <article class="service-card">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="service-number">06</p>
+
+                  <h3 class="mt-5 font-display text-2xl font-semibold">
+                    Full Grooming Experience
+                  </h3>
+                </div>
+
+                <span class="service-price">R450</span>
+              </div>
+
+              <p class="mt-5 leading-7 text-brand-muted">
+                The complete experience: haircut, beard sculpting, finishing and
+                detailed styling from start to finish.
+              </p>
+
+              <div class="service-meta">
+                <span>75 minutes</span>
+                <span>Premium grooming</span>
+              </div>
+
+              <a
+                href="booking.html?service=Full%20Grooming%20Experience"
+                class="service-link"
+              >
+                Book this service
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             SERVICE STANDARD
+        ========================== -->
+      <section
+        class="border-y border-brand-border bg-brand-surface section-padding"
+      >
+        <div
+          class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center"
+        >
+          <div>
+            <p class="eyebrow">The Fade Room Standard</p>
+
+            <h2 class="section-title mt-4">Every detail matters.</h2>
+
+            <p class="mt-6 leading-8 text-brand-muted">
+              A great haircut is more than taking length off. Our barbers take
+              time to understand what you want, work with your natural features
+              and finish every appointment with precision.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="feature-box">
+              <span class="feature-icon">01</span>
+
+              <h3 class="mt-5 font-display text-xl">Consultation</h3>
+
+              <p class="mt-3 text-sm leading-6 text-brand-muted">
+                We understand your preferred look before the first cut.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <span class="feature-icon">02</span>
+
+              <h3 class="mt-5 font-display text-xl">Precision</h3>
+
+              <p class="mt-3 text-sm leading-6 text-brand-muted">
+                Every line, blend and finish receives careful attention.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <span class="feature-icon">03</span>
+
+              <h3 class="mt-5 font-display text-xl">Personal Style</h3>
+
+              <p class="mt-3 text-sm leading-6 text-brand-muted">
+                Your haircut should work for you, not simply follow a trend.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <span class="feature-icon">04</span>
+
+              <h3 class="mt-5 font-display text-xl">Clean Finish</h3>
+
+              <p class="mt-3 text-sm leading-6 text-brand-muted">
+                Professional finishing brings the entire look together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             BOOKING CTA
+        ========================== -->
+      <section class="section-padding">
+        <div
+          class="mx-auto max-w-5xl border border-brand-gold/30 bg-brand-surface px-6 py-14 text-center sm:px-12"
+        >
+          <p class="eyebrow">Ready When You Are</p>
+
+          <h2
+            class="mx-auto mt-4 max-w-3xl font-display text-4xl font-semibold sm:text-5xl"
+          >
+            Your next cut starts here.
+          </h2>
+
+          <p class="mx-auto mt-6 max-w-2xl leading-8 text-brand-muted">
+            Choose your service, select your barber and find a time that works
+            for you.
+          </p>
+
+          <a href="booking.html" class="gold-button mt-8 inline-flex">
+            Book Your Appointment
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="border-t border-brand-border bg-brand-surface">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Brand -->
+          <div>
+            <a href="index.html" class="flex items-center gap-3">
+              <span
+                class="flex h-10 w-10 items-center justify-center border border-brand-gold text-brand-gold font-display"
+              >
+                FR
+              </span>
+
+              <span class="font-display text-lg"> THE FADE ROOM </span>
+            </a>
+
+            <p class="mt-5 max-w-xs text-sm leading-7 text-brand-muted">
+              Precision grooming for people who care about the details.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <div>
+            <h3 class="footer-heading">Explore</h3>
+
+            <nav class="mt-5 flex flex-col gap-3 text-sm">
+              <a href="index.html" class="footer-link">Home</a>
+              <a href="services.html" class="footer-link">Services</a>
+              <a href="about.html" class="footer-link">About</a>
+              <a href="booking.html" class="footer-link">Book an Appointment</a>
+              <a href="terms.html" class="footer-link">Terms & Conditions</a>
+            </nav>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="footer-heading">Contact</h3>
+
+            <div class="mt-5 space-y-3 text-sm text-brand-muted">
+              <p>
+                <a href="tel:+27105550147" class="footer-link">
+                  +27 10 555 0147
+                </a>
+              </p>
+
+              <p>
+                <a href="mailto:hello@thefaderoom.example" class="footer-link">
+                  hello@thefaderoom.example
+                </a>
+              </p>
+
+              <p>
+                24 Main Street<br />
+                Rosebank, Johannesburg<br />
+                South Africa
+              </p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div>
+            <h3 class="footer-heading">Opening Hours</h3>
+
+            <div class="mt-5 space-y-3 text-sm text-brand-muted">
+              <p class="flex justify-between gap-6">
+                <span>Mon – Fri</span>
+                <span>09:00 – 18:00</span>
+              </p>
+
+              <p class="flex justify-between gap-6">
+                <span>Saturday</span>
+                <span>08:00 – 16:00</span>
+              </p>
+
+              <p class="flex justify-between gap-6">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 flex flex-col gap-4 border-t border-brand-border pt-6 text-sm text-brand-muted sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>
+            © <span data-current-year></span> The Fade Room. All rights
+            reserved.
+          </p>
+
+          <div class="flex gap-5">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
